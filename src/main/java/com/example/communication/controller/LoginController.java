@@ -1,5 +1,6 @@
-package com.example.communication;
+package com.example.communication.controller;
 
+import com.example.communication.Main;
 import com.example.communication.util.StringUtil;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -32,7 +33,7 @@ public class LoginController {
             return;
         }
         if(accountText.equals("admin")&&passwordText.equals("admin")){
-
+            Main.changeView("main.fxml");
         }else{
             errorInfo.setText("账户或密码错误");
             errorInfo.setVisible(true);

@@ -32,4 +32,14 @@ public class Main extends Application {
             e.printStackTrace();
         }
     }
+    public static void addView(String fxml){
+        Stage stage=new Stage();
+        Parent root=null;
+        try{
+            root=FXMLLoader.load(Main.class.getResource(fxml));
+            stage.setScene(new Scene(root));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
